@@ -60,7 +60,7 @@ app.get("/invoice/:id", async (req, res) => {
 
   try {
     const response = await axios.get(url, {
-      Authorization: `Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..mAzYwWezs9lzyujN-_QWuw.VHp_RAB_drZo4GNcgagE1PiOYXr0OTMbD_I6tFFv3O63s08RR2O19lvebq7RNE02MC2ZUsi_IXHumpBRbLfedz0rmEuOirvjiED0Z1pUqArSamw8r01cBj5qRd_dBrknsuXkvfAu5R1X6DSxvBXALkLHCsddqs8dDa04y8gOl5WzHi3pu0afGy1LaFhPHeaWF_38OltCya8J4bIsNXPWh5O_MGtNWtS30Pfs_7Oi8NTcu1VZ-3mDvjt20eusCbBzqBnscSZVJqhXKiWB_uWJwNEe4H_Kyp-gLpl1lTjCG6zeuHuluDC5mFTNbmSZBTcLSP7Oi6OtCbP5iJayFusBRNC5ncAplEXgNGv9Xae0egq9ZP2i4PJ4zzwexSqwYZdd_dSPeWHZXFMtxNTd0To3QKZ4aL4Fj4PZNmpevphPIcUhm5sw5WhHBm-xwaKyxswDg1cFykENzR52dztdhgbfWYMifOz_mIXOXd7EVbY8LcEgPF4NUaszr3GF8lp0gKkTl63MLgWevg230Xb2aiSipJJissryT5wgpD2qAjNn-6s4-uxctYQO5HEwIDTeKQXlA6jDdDhHkexNKLi01UwzThUd8S5ZO5Tbiuc5A6Nsabl2U99Burhgs0C3ggEdWpZ8ZANFsdFtlN42POyBfFouTavd75-ZX2jKPqgWXXJe_dVBmlkMMJKD80Tq7Lzw-EyoD35Bswsstt9KqSYDVcPR-5vzrQH0Jb8zplnTuM-Uw_bqtzBboc_Apy5M7Wf_pRZU.KFLvKQjDF3OnCWJzU05VEQ`,
+      Authorization: `Bearer ${oauth2_token_json.access_token}`,
       "Content-Type": "application/json",
     });
     console.log(response);
