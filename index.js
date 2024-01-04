@@ -56,7 +56,7 @@ app.get("/callback", (req, res) => {
 
 app.get("/invoice/:id", async (req, res) => {
   const id = req.params.id;
-  const url = `${baseUrl}/v3/company/${companyId}/invoice/${id}?minorversion=69`;
+  const url = `${baseUrl}/v3/company/${companyId}/invoice/${id}/pdf?minorversion=69`;
 
   try {
     const response = await axios.get(url, {
